@@ -1,0 +1,21 @@
+item_prices = [2.5, 1.75, 4.0, 3.25]  
+quantities = [3, 2, 1, 4]             
+discount_rate = 10                  
+tax_rate = 8                        
+total_cost_before_discount = sum(item_price * quantity for item_price, quantity in zip(item_prices, quantities))
+discount_amount = (discount_rate / 100) * total_cost_before_discount
+discounted_total = total_cost_before_discount - discount_amount
+tax_amount = (tax_rate / 100) * discounted_total
+final_total_cost = discounted_total + tax_amount
+print("Total cost before discount: $", total_cost_before_discount)
+print("Discount amount: $", discount_amount)
+print("Discounted total: $", discounted_total)
+print("Tax amount: $", tax_amount)
+print("Final total cost: $", final_total_cost)
+
+ output 
+           Total cost before discount: $ 28.0
+Discount amount: $ 2.8000000000000003
+Discounted total: $ 25.2
+Tax amount: $ 2.016
+Final total cost: $ 27.216
