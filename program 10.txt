@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+sales_values = [10000, 12000, 15000, 13000, 18000, 16000]
+plt.figure(figsize=(8, 5))
+plt.plot(months, sales_values, marker='o', linestyle='-', color='b', label='Monthly Sales')
+plt.title('Monthly Sales Data')
+plt.xlabel('Months')
+plt.ylabel('Sales')
+plt.legend()
+plt.grid(True)
+plt.show()
