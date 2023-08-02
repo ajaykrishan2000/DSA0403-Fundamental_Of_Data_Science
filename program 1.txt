@@ -1,0 +1,15 @@
+import numpy as np
+student_scores = np.array([
+    [90, 85, 78, 92],
+    [88, 92, 79, 85],
+    [76, 81, 95, 88],
+])
+average_scores = np.mean(student_scores, axis=0)
+subject_with_highest_avg = np.argmax(average_scores)
+subject_names = ["Math", "Science", "English", "History"]
+print("Average scores:", average_scores)
+print("Subject with the highest average score:", subject_names[subject_with_highest_avg])
+
+output
+             Average scores: [84.66666667 86.         84.         88.33333333]
+Subject with the highest average score: History
